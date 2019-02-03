@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voting/Ranking Form - Assignment 1 - Part 1</title>
+	<style type="text/css">td {width:100; text-align:center;}</style>
+
+</head>
+<body>
+<h1>Register your opinion</h1><br>
+How well do you rate the information on this site (where 1 is very poor, and 5 is very good)?<br><br>
+<form action="#" method="post" id="votingForm" name="votingForm">
+	<table>
+		<tr>
+			<td><input type="radio" name="rating" value="1" id="vpoor_rating1"></td>
+			<td><input type="radio" name="rating" value="2" id="poor_rating2"></td>
+			<td><input type="radio" name="rating" value="3" checked="checked" id="average_rating3"></td>
+			<td><input type="radio" name="rating" value="4" id="good_rating4"></td>
+			<td><input type="radio" name="rating" value="5" id="vgood_rating5"></td>
+		</tr>
+		<tr>
+			<td><label for="vpoor_rating1"> 1</label></td>
+			<td><label for="poor_rating2"> 2</label></td>
+			<td><label for="average_rating3"> 3</label></td>
+			<td><label for="good_rating4"> 4</label></td>
+			<td><label for="vgood_rating5"> 5</label></td>
+		</tr>
+		<tr>
+			<td><label for="vpoor_rating1"> Very Poor</label></td>
+			<td><label for="poor_rating2"> Poor</label></td>
+			<td><label for="average_rating3"> Average</label></td>
+			<td><label for="good_rating4"> Good</label></td>
+			<td><label for="vgood_rating5"> Very Good</label></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="vote" id="vote" value="Vote now"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+ <class name="com.ragz.hw5.pojo.Movie" table="movie">
+       <id column="id" name="id" >
+      <generator class="native"/>
+    </id>
+    <property column="movie_title" name="title" type="string"/>
+    <property column="lead_actor" name="actor" type="string"/>
+    <property column="lead_actress" name="actress" type="string"/>
+    <property column="genre" name="genre" type="string"/>
+    <property column="year" name="year" type="int"/>
+    </class>
+</hibernate-mapping>

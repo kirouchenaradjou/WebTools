@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean name="personDAO" class="com.raghavi.insurance.dao.PersonDAO"
+		scope="request"></bean>
+	<bean name="planDAO"
+		class="com.raghavi.insurance.dao.RegisterPlanDAO" scope="request"></bean>
+	<bean name="doctorDAO"
+		class="com.raghavi.insurance.dao.DoctorDAO" scope="request"></bean>
+	<bean name="caseSheetDAO"
+		class="com.raghavi.insurance.dao.CaseSheetDAO" scope="request"></bean>
+	<bean name="userDAO"
+		class="com.raghavi.insurance.dao.UserDAO" scope="request"></bean>
+		
+	<bean id="daoFactory" class="com.raghavi.insurance.dao.DAOFactory"></bean>
+	<bean id="userValidator"
+		class="com.raghavi.insurance.validator.UserValidator"></bean>
+	<bean id="planCreateValidator"
+		class="com.raghavi.insurance.validator.PlanCreateValidator"></bean>
+
+</beans>

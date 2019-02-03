@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Example Form</title>
+	<style>
+		
+   label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+	</style>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script>
+
+ $(document).ready(function(){
+ 	 $('#firstName').blur(function(){
+         var regExName = /^[a-zA-Z]+$/
+         var inputVal = $(this).val();
+         if(!regExName.test(inputVal)) {
+		$('#errorMsgFName').css( 'display', 'block');
+		 $(this).val('');
+         }
+         else
+         {
+         	$('#errorMsgFName').css( 'display', 'none');
+         }
+		 
+    });
+	  
+});
+	  </script>
+</head>
+<body>
+    <h1>HTML5 Form Example - Feedback Page</h1>
+<article>
+<h2>Love something? Hate something? Let us know!!!!</h2>
+<p>Note : Fields marked with an asterisk(*) are mandatory. All your responses are confidential! </p>
+</article>
+ <div id="container">
+	 
+	 <main>
+ <form id="myForm" method="post" action="feedbackComplete.do" oninput="x.value=parseInt(rate.value)">
+ 	<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="miss" />Miss
+			<input type="radio" name="title" id="mr" value="mr" />Mr.
+			<input type="radio" name="title" id="mrs" value="mrs" />Mrs.
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name"/>	
+			<br><br>
+			<div id="errorMsgFName" style="display:none;color:red">
+			Invalid input for your first name. Only text values permitted.
+			<br /><br />
+			</div>
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+			<br><br>
+		    <label for="emailId">Email Id*:</label>
+			<input type="email" name="emailId" id="emailId"  placeholder="yourname@domain.com" required="required" />
+			<br><br>
+			<label for="zipcode">ZipCode:</label>
+			<input type="number" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+			<br><br>
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required="required"></textarea>
+			<br><br>
+			<label for="profession">Who are you?</label>
+			 <input list="profession" name="profession">
+  <datalist id="profession">
+    <option value="Student">
+    <option value="Professor">
+    <option value="Engineer">
+    <option value="N/A">
+  </datalist>
+  <br><br>
+  <label for="rating">Rate us</label>
+  1
+  <input type="range" id="rate" name="rate" value="5">
+  100
+  <br>
+  You have rated us : <output name="x" for="rate"></output>
+  <br>
+			<center><input type="Submit" id="submit">
+			<input type="Reset"></center>
+			<br><br>
+ </form>
+  </main>
+ </div>
+</body>
+</html>
